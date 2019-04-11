@@ -3,7 +3,7 @@ module.exports = (variants) => {
     addUtilities({
       '.test': {
         display: 'block'
-      },
+      }
     }, variants)
   }
 }
