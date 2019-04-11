@@ -1,0 +1,24 @@
+{
+  "name": "tailwindcss-plugin-jest-example",
+  "version": "0.1.0",
+  "description": "An example showing how to write tests for for Tailwind CSS plugins.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["tailwindcss", "jest"],
+  "author": {
+    "name": "Oliver Davies",
+    "url" : "https://www.oliverdavies.uk"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "jest-matcher-css": "^1.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "postcss": "^7.0.14",
+    "tailwindcss": "^1.0.0-beta.4"
+  }
+}
