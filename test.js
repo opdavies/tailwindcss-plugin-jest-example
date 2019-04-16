@@ -6,9 +6,7 @@ const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
 const disableCorePlugins = () => {
-  return _.mapValues(defaultConfig.variants, plugin => {
-    return false
-  })
+  return _.mapValues(defaultConfig.variants, () => false)
 }
 
 const generatePluginCss = (options = {}) => {
