@@ -6,10 +6,13 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["tailwindcss", "jest"],
+  "keywords": [
+    "tailwindcss",
+    "jest"
+  ],
   "author": {
     "name": "Oliver Davies",
-    "url" : "https://www.oliverdavies.uk"
+    "url": "https://www.oliverdavies.uk"
   },
   "license": "MIT",
   "devDependencies": {
@@ -19,6 +22,6 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "postcss": "^7.0.14",
-    "tailwindcss": "^1.0.0-beta.4"
+    "tailwindcss": "^1.0.0-beta.5"
   }
 }
