@@ -32,7 +32,7 @@ test('it generates the correct classes with no variants', () => {
   return generatePluginCss().then(css => {
     expect(css).toMatchCss(`
       .test {
-        display: block;
+        display: block
       }
     `)
   })
@@ -42,15 +42,15 @@ test('it generates the correct classes with variants', () => {
   return generatePluginCss({ variants: ['hover', 'focus'] }).then(css => {
     expect(css).toMatchCss(`
       .test {
-        display: block;
+        display: block
       }
 
       .hover\\:test:hover {
-        display: block;
+        display: block
       }
 
       .focus\\:test:focus {
-        display: block;
+        display: block
       }
     `)
   })
