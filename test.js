@@ -22,7 +22,7 @@ expect.extend({
 })
 
 test('it generates the correct classes with no variants', () => {
-  return generatePluginCss().then(css => {
+  generatePluginCss().then(css => {
     expect(css).toMatchCss(`
       .test {
         display: block
@@ -32,7 +32,7 @@ test('it generates the correct classes with no variants', () => {
 })
 
 test('it generates the correct classes with variants', () => {
-  return generatePluginCss({ variants: ['hover', 'focus'] }).then(css => {
+  generatePluginCss({ variants: ['hover', 'focus'] }).then(css => {
     expect(css).toMatchCss(`
       .test {
         display: block
