@@ -1,6 +1,6 @@
 const cssMatcher = require('jest-matcher-css')
 const defaultConfig = require('tailwindcss/defaultConfig')
-const plugin = require('./index.js')
+const plugin = require('./index')
 const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
