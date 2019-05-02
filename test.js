@@ -4,7 +4,7 @@ const plugin = require('./index')
 const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
-const generatePluginCss = (options = {}) => {
+function generatePluginCss(options = {}) {
   return postcss(
     tailwindcss({
       corePlugins: false,
