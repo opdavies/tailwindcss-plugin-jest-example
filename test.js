@@ -21,29 +21,33 @@ expect.extend({
 })
 
 test('it generates the correct classes with no variants', () => {
+  const output = `
+    .test {
+      display: block
+    }
+  `
+
   generatePluginCss().then(result => {
-    expect(result.css).toMatchCss(`
-      .test {
-        display: block
-      }
-    `)
+    expect(result.css).toMatchCss(output)
   })
 })
 
 test('it generates the correct classes with variants', () => {
+  const output = `
+    .test {
+      display: block
+    }
+
+    .hover\\:test:hover {
+      display: block
+    }
+
+    .focus\\:test:focus {
+      display: block
+    }
+  `
+
   generatePluginCss({ variants: ['hover', 'focus'] }).then(result => {
-    expect(result.css).toMatchCss(`
-      .test {
-        display: block
-      }
-
-      .hover\\:test:hover {
-        display: block
-      }
-
-      .focus\\:test:focus {
-        display: block
-      }
-    `)
+    expect(result.css).toMatchCss(output)
   })
 })
