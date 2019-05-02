@@ -14,7 +14,6 @@ function generatePluginCss(options = {}) {
   .process('@tailwind utilities;', {
     from: undefined
   })
-  .then(result => result.css)
 }
 
 expect.extend({
@@ -22,8 +21,8 @@ expect.extend({
 })
 
 test('it generates the correct classes with no variants', () => {
-  generatePluginCss().then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss().then(result => {
+    expect(result.css).toMatchCss(`
       .test {
         display: block
       }
@@ -32,8 +31,8 @@ test('it generates the correct classes with no variants', () => {
 })
 
 test('it generates the correct classes with variants', () => {
-  generatePluginCss({ variants: ['hover', 'focus'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ variants: ['hover', 'focus'] }).then(result => {
+    expect(result.css).toMatchCss(`
       .test {
         display: block
       }
